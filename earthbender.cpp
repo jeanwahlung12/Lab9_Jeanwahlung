@@ -1,7 +1,7 @@
 #include "earthbender.h"
 #include "airbender.h"
 
-earthbender::earthbender(string nom,int salud,int def, int fuer, int lvl) : Bender( nom, salud, def,  fuer,  lvl){
+earthbender::earthbender(string nom,int salud,int def, double fuer, int lvl) : Bender( nom, salud, def,  fuer,  lvl){
 	nombre=nom;
 	HP=salud;
 	defensa=def;

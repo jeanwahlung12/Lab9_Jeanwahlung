@@ -1,6 +1,6 @@
 #include "airbender.h"
 #include "firebender.h"
-airbender::airbender(string nom,int salud,int def, int fuer, int lvl) : Bender( nom, salud, def,  fuer,  lvl){
+airbender::airbender(string nom,int salud,int def, double fuer, int lvl) : Bender( nom, salud, def,  fuer,  lvl){
 	nombre=nom;
 	HP=salud;
 	defensa=def;

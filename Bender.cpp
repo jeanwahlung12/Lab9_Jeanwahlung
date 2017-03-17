@@ -2,7 +2,7 @@
 
 
 
-Bender::Bender(string nom,int salud,int def, int fuer, int lvl){
+Bender::Bender(string nom,int salud,int def, double fuer, int lvl){
 	this -> nombre=nom;
 	this -> HP=salud;
 	this -> defensa=def;
@@ -30,7 +30,7 @@ int Bender:: getHP(){
 	return HP;
 }
 
-int Bender:: getfuerza(){
+double Bender:: getfuerza(){
 	return fuerza;
 }
 

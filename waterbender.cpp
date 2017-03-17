@@ -1,6 +1,6 @@
 #include "waterbender.h"
 #include "earthbender.h"
-waterbender::waterbender(string nom,int salud,int def, int fuer, int lvl) : Bender( nom, salud, def,  fuer,  lvl){
+waterbender::waterbender(string nom,int salud,int def, double fuer, int lvl) : Bender( nom, salud, def,  fuer,  lvl){
 	nombre=nom;
 	HP=salud;
 	defensa=def;
@@ -9,7 +9,8 @@ waterbender::waterbender(string nom,int salud,int def, int fuer, int lvl) : Bend
 }
 
 void waterbender::ataque(Bender* enemy){
-	
+	enemy->setHP(enemy->getHP()-fuerza);
+
 }
 void waterbender::ataqueespecial(Bender* enemy){
 	srand(time(NULL));

@@ -1,7 +1,7 @@
 #include "firebender.h"
 #include "Bender.h"
 #include "waterbender.h"
-firebender::firebender(string nom,int salud,int def, int fuer, int lvl) : Bender( nom, salud, def,  fuer,  lvl){
+firebender::firebender(string nom,int salud,int def, double fuer, int lvl) : Bender( nom, salud, def,  fuer,  lvl){
 	
 }
 

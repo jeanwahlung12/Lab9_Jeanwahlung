@@ -64,7 +64,9 @@ int main(){
 			cin >> pos1;
 			cout << "ingrese la posicion en la que se encuentra el peleador 2 :" << endl;
 			cin >> pos2;
-			while(benders[pos1]->getHP() <0 || benders[pos2]->getHP()<0){
+			cout << benders[pos1]->getHP() << endl;
+			
+			while(benders[pos1]->getHP() >0 && benders[pos2]->getHP()>0){
 				int attack;
 				cout << " ingrese el tipo de ataque jugador 1 \n 1) ataquenormal \n 2) ataqueespecial : " << endl;
 				cin >> attack;
@@ -72,9 +74,9 @@ int main(){
 					benders[pos1]->ataque(benders[pos2]);
 				}
 				if(attack==2){
-					benders[pos2]->ataqueespecial(benders[pos2]);
+					benders[pos1]->ataqueespecial(benders[pos2]);
 				}
-
+				cout << "El HP del jugador 2 es :" << benders[pos2]->getHP() << endl;
 				cout << " ingrese el tipo de ataque jugador 2 \n 1) ataquenormal \n 2) ataqueespecial : " << endl;
 				cin >> attack;
 				if (attack ==1){
@@ -83,6 +85,7 @@ int main(){
 				if(attack==2){
 					benders[pos2]->ataqueespecial(benders[pos1]);
 				}
+				cout << " el HP del jugador 1 es : " << benders[pos1]->getHP() << endl;
 
 
 			}

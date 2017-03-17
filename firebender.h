@@ -3,7 +3,7 @@
 
 class firebender : public Bender{
 public:
-	firebender(string,int,int,int,int);
+	firebender(string,int,int,double,int);
 	
 	virtual void ataque(Bender*);
 	virtual void ataqueespecial(Bender*);
