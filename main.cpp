@@ -10,7 +10,7 @@ int main(){
 	char respmenu='s';
 	while(respmenu=='s'){
 		char ragregar='s';
-		while (ragregar='s'){
+		while (ragregar=='s' || ragregar=='S'){
 			int menu;
 			string nombre;
 			int HP;
@@ -30,16 +30,29 @@ int main(){
 			cout << "que desea agregar : \n 1/ airbender \n 2/waterbender \n 3/firebender \n 4/earthbender:" << endl;
 			cin >> menu;
 			if(menu==1){
-
+				
+				airbender* air = new airbender(nombre,HP,defensa,fuerza,lvlsuerte);
+				benders.push_back(air);	
 			}
 			else if(menu==2){
-
+				waterbender* water = new waterbender(nombre,HP,defensa,fuerza,lvlsuerte);
+				benders.push_back(water);
 			}
 			else if(menu==3){
-
+				firebender* fire = new firebender(nombre,HP,defensa,fuerza,lvlsuerte);
+				benders.push_back(fire);
 			}
 			else if(menu==4){
-
+				earthbender* earth = new earthbender(nombre,HP,defensa,fuerza,lvlsuerte);
+				benders.push_back(earth);
+			}
+			cout << "desea continuar agregando (s/n) :" << endl;
+			cin >> ragregar;
+		}
+		char respfight='s';
+		while(respfight=='s' || respfight=='S'){
+			for (int i = 0; i < benders.size(); ++i){
+				cout << i <<")" << benders[i]->getnombre();
 			}
 		}
 		

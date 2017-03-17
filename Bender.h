@@ -3,6 +3,7 @@
 #include <string>
 #include <typeinfo>
 #include <stdlib.h>
+#include <string>
 
 #include <time.h>
 using namespace std;
@@ -21,6 +22,7 @@ public:
 	Bender(string,int,int,int,int);
 	virtual ~Bender();
 	virtual void  setHP(int) ;
+	virtual string getnombre();
 	virtual void setfuerza(int);
 	virtual void setlvlsuerte(int);
 	virtual int getHP();

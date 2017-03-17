@@ -37,4 +37,6 @@ int Bender:: getfuerza(){
 int Bender:: getlvlsuerte(){
 	return lvlsuerte;
 }
-
+string Bender::getnombre(){
+	return nombre;
+}
