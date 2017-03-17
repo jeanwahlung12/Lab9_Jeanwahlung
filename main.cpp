@@ -76,14 +76,23 @@ int main(){
 				if(attack==2){
 					benders[pos1]->ataqueespecial(benders[pos2]);
 				}
+				if(attack==3){
+					cout << " a ganado el player 2 ud a escapado :" ;
+					return 0;
+				}
 				cout << "El HP del jugador 2 es :" << benders[pos2]->getHP() << endl;
-				cout << " ingrese el tipo de ataque jugador 2 \n 1) ataquenormal \n 2) ataqueespecial : " << endl;
+				cout << " ingrese el tipo de ataque jugador 2 \n 1) ataquenormal \n 2) ataqueespecial \n 3)run: " << endl;
 				cin >> attack;
+				i
 				if (attack ==1){
 					benders[pos2]->ataque(benders[pos1]);
 				}
 				if(attack==2){
 					benders[pos2]->ataqueespecial(benders[pos1]);
+				}
+				if(attack==3){
+					cout << " a ganado el player 1 ud a escapado :" ;
+					return 0;
 				}
 				cout << " el HP del jugador 1 es : " << benders[pos1]->getHP() << endl;
 
