@@ -19,7 +19,7 @@ void earthbender::ataqueespecial(Bender* enemy){
   	  int num ;
   	  num = 1 + rand() % (1000 - 1);
   	  if(num ==50){
-  	  	enemy ->setHP(enemy->getHP() - (fuerza+(fuerza*0.25));
+  	  	enemy ->setHP(enemy->getHP() - (fuerza+(fuerza*0.25)));
 
 
   	  }
