@@ -21,12 +21,16 @@ int main(){
 			cin >> nombre;
 			cout << "ingrese el HP :" << endl;
 			cin >> HP;
-			cout " ingrese la defensa :" << endl;
+			cout << " ingrese la defensa :" << endl;
 			cin >> defensa;
 			cout << "ingrese la fuerza :" << endl;
 			cin >> fuerza;
 			cout << " ingrese el nivel de suerte :" << endl;
 			cin >> lvlsuerte;
+			while(lvlsuerte>10){
+				cout << "ERROR ingrese otra vez el nivel de suerte 0-10 :" << endl;
+				cin >> lvlsuerte;
+			}
 			cout << "que desea agregar : \n 1/ airbender \n 2/waterbender \n 3/firebender \n 4/earthbender:" << endl;
 			cin >> menu;
 			if(menu==1){
@@ -52,8 +56,38 @@ int main(){
 		char respfight='s';
 		while(respfight=='s' || respfight=='S'){
 			for (int i = 0; i < benders.size(); ++i){
-				cout << i <<")" << benders[i]->getnombre();
+				cout << i <<")" << benders[i]->getnombre() << endl;
 			}
+			int pos1,pos2;
+
+			cout << "ingrese la posicion en la que se encuentra el peleador 1 :" << endl;
+			cin >> pos1;
+			cout << "ingrese la posicion en la que se encuentra el peleador 2 :" << endl;
+			cin >> pos2;
+			while(benders[pos1]->getHP() <0 || benders[pos2]->getHP()<0){
+				int attack;
+				cout << " ingrese el tipo de ataque jugador 1 \n 1) ataquenormal \n 2) ataqueespecial : " << endl;
+				cin >> attack;
+				if (attack ==1){
+					benders[pos1]->ataque(benders[pos2]);
+				}
+				if(attack==2){
+					benders[pos2]->ataqueespecial(benders[pos2]);
+				}
+
+				cout << " ingrese el tipo de ataque jugador 2 \n 1) ataquenormal \n 2) ataqueespecial : " << endl;
+				cin >> attack;
+				if (attack ==1){
+					benders[pos2]->ataque(benders[pos1]);
+				}
+				if(attack==2){
+					benders[pos2]->ataqueespecial(benders[pos1]);
+				}
+
+
+			}
+			cout << " desea otra pelea : (s/n) " << endl;
+			cin >> respfight;
 		}
 		
 	}//fin while menu
