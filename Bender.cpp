@@ -3,11 +3,11 @@
 
 
 Bender::Bender(string nom,int salud,int def, int fuer, int lvl){
-	nombre=nom;
-	HP=salud;
-	defensa=def;
-	fuerza=fuer;
-	lvlsuerte=lvl;
+	this -> nombre=nom;
+	this -> HP=salud;
+	this -> defensa=def;
+	this -> fuerza=fuer;
+	this -> lvlsuerte=lvl;
 }
 
 Bender::~Bender(){
@@ -38,9 +38,3 @@ int Bender:: getlvlsuerte(){
 	return lvlsuerte;
 }
 
-void Bender:: ataque(Bender* enemy){
-	
-}
-void Bender::ataqueespecial(Bender* enemy){
-
-}
